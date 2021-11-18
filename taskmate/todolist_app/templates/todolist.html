@@ -27,8 +27,10 @@
       <thead class="table-dark">
         <tr class="row"> 
           <th class="col-1">ID</th>
-          <th class="col-6">Task</th>
-          <th class="col-3">Done</th>
+          <th class="col-3">Task</th>
+          <th class="col-2">Date Created</th>
+          <th class="col-2">Date Modified</th>
+          <th class="col-2">Done</th>
           <th class="col-1">Edit</th>
           <th class="col-1">Delete</th>
         </tr>
@@ -39,16 +41,20 @@
           {% if obj.done %}
             <tr class="table-success row">
               <td class="col-1">{{obj.id}} </td>
-              <td class="col-6">{{obj.task}}</td>
-              <td class="col-3"><a href="{% url 'pending_task' obj.id%}"><button type="button" class="btn btn-outline-dark">Mark This Pending</button></a></td>
+              <td class="col-3">{{obj.task}}</td>
+              <td class="col-2">{{obj.created_at}}</td>
+              <td class="col-2">{{obj.updated_at}}</td>
+              <td class="col-2"><a href="{% url 'pending_task' obj.id%}"><button type="button" class="btn btn-outline-dark">Mark This Pending</button></a></td>
               <td class="col-1"><a href="{% url 'edit_task' obj.id%}"><button type="button" class="btn btn-outline-warning">Edit</button> </a></td>
               <td class="col-1"><a href="{% url 'delete_task' obj.id%}"><button type="button" class="btn btn-outline-danger">Delete</button> </a></td>
             </tr>
           {% else %}
             <tr class="row">
               <td class="col-1">{{obj.id}} </td>
-              <td class="col-6">{{obj.task}}</td>
-              <td class="col-3"><a href="{% url 'complete_task' obj.id%}"><button type="button" class="btn btn-outline-dark">Mark This Completed</button></a></td>
+              <td class="col-3">{{obj.task}}</td>
+              <td class="col-2">{{obj.created_at}}</td>
+              <td class="col-2">{{obj.updated_at}}</td>
+              <td class="col-2"><a href="{% url 'complete_task' obj.id%}"><button type="button" class="btn btn-outline-dark">Mark This Completed</button></a></td>
               <td class="col-1"><a href="{% url 'edit_task' obj.id%}"> <button type="button" class="btn btn-outline-warning">Edit</button> </a></td>
               <td class="col-1"><a href="{% url 'delete_task' obj.id%}"> <button type="button" class="btn btn-outline-danger">Delete</button> </a></td>
           </tr>
