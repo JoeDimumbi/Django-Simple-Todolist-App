@@ -1,10 +1,89 @@
 {% extends 'base.html' %}
 
+{%load static%}
+
 {% block title %}
 <title>Contact Us  - Taskmate</title>
+
 {% endblock title %}
 {% block content %}
-  <div class="container">
-    <h1> {{contact_text}} </h1>
-    </div>
+  <section class="container mt-5">
+   <!--Contact heading-->
+   <div class="row">
+      <!--Grid column-->
+      <div class="col-sm-12 mb-4 col-md-5">
+         <!--Form with header-->
+         <div class="card border-primary rounded shadow">
+            <div class="card-header p-0">
+               <div class="bg-primary text-white text-center py-2">
+                  <h3><i class="fa fa-envelope"></i> Let me know what you think:</h3>
+                  <p class="m-0">I will do my best to respond.</p>
+               </div>
+            </div>
+            <div class="card-body p-3">
+               
+                  <div class="form-group">
+                  <label> Your name </label>
+                  <div class="input-group">
+                     <input value="" type="text" name="data[name]" class="form-control" id="inlineFormInputGroupUsername" placeholder="Your name">
+                  </div>
+				</div>
+                  <div class="form-group mt-3">
+                     <label>Your email</label>
+                     <div class="input-group mb-2 mb-sm-0">
+                        <input type="email" value="" name="data[email]" class="form-control" id="inlineFormInputGroupUsername" placeholder="Email">
+                     </div>
+                  </div>
+                  <div class="form-group mt-3">
+                     <label>Subject</label>
+                     <div class="input-group mb-2 mb-sm-0">
+                        <input type="text" name="data[subject]" class="form-control" id="inlineFormInputGroupUsername" placeholder="Subject">
+                     </div>
+                  </div>
+                  <div class="form-group mt-3">
+                     <label>Message</label>
+                     <div class="input-group mb-2 mb-sm-0">
+                        <textarea class="form-control" id="validationTextarea" placeholder="Type your message here" required></textarea>
+                     </div>
+                  </div>
+                  <div class="form-check mt-3">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      Agree to terms and conditions
+                    </label>
+                  </div>
+                  <div class="text-center mt-3">
+                     <input type="submit" name="submit" value="submit" class="btn btn-outline-primary">
+                  </div>
+             
+			     </div>
+				  
+            </div>
+         </div>
+      <!--Grid column-->
+	  
+      <!--Grid column-->
+      <div class="col-sm-12 col-md-7">
+         <!--Google map-->
+         <div class="mb-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13242.793354250744!2d18.414715177427208!3d-33.92316269025768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc6763a3ee4fe9%3A0x95516cf23f5ee8f5!2sCape%20Town%20City%20Centre%2C%20Cape%20Town%2C%208000!5e0!3m2!1sen!2sza!4v1637256387666!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>         </div>
+         <!--Buttons-->
+         <div class="row text-center">
+            <div class="col-md-4">
+               <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-map-marker"></i></a>
+               <p> Your Address ….. </p>
+            </div>
+            <div class="col-md-4">
+               <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-phone"></i></a>
+               <p>+27- 00000000</p>
+            </div>
+            <div class="col-md-4">
+               <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-envelope"></i></a>
+               <p> info@spearmax.co.za</p>
+            </div>
+         </div>
+      </div>
+      <!--Grid column-->
+	    </div>
+</section>
   {% endblock content %}
