@@ -4,6 +4,15 @@
 <title>To do list Manager</title>
 {% endblock title %}
 {% block content %}
+
+{% comment %} {% if request.user.is_authenticated %}
+  <p> {{ request.user}} </p>
+  <a href=''>Logout</a>
+{% else%}
+  <a href=''>Login</a>
+{% endif %}
+  <hr> {% endcomment %}
+  
   <div class="container">
   </br>
   {% if messages %}

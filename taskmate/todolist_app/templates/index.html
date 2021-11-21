@@ -4,6 +4,7 @@
 {% block title %}
 <title>Welcome to Taskmate</title>
 {% endblock title %}
+
 {% block content %}
     <div class="container">
         <div class="row mt-5" >
@@ -23,11 +24,9 @@
                 <p class="h1 text-primary"> Quick And Easy to Use, Anytime, Anywhere! </p>
                 <p class="h2 mt-3"> "Plan Your Day Better, Get Your Life Organized" </p>
                 <p class="h5"> TASKMATE Lets You Keep Track Of Your Task In One Place. </p>
-                
-                <a href="{% url 'todolist' %}"><button type="button" class="btn btn-primary btn-lg mt-3 shadow">Let's Get Started</button>
+                <a href="{% url 'todolist' %}"><button type="button" class="btn btn-primary btn-lg mt-3 shadow">Let's Get Started</button></a>
                 </center>         
             </div>
-        </div>
-        
+        </div> 
     </div>
 {% endblock content %}
